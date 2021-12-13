@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.control.SignupSceneController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" text="BACK">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label text="Full Name:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fullnameField" />
+            <Label text="Username:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Label text="Password:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" />
+            <Label text="Zip Code:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="zipcodeField" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Label text="State:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="stateField" />
+            <Button fx:id="createAccountButton" mnemonicParsing="false" onAction="#signup" text="Create Account!">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <Label text="SIGN UP APPLICATION" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="incorrect" text="Label" textAlignment="CENTER" textFill="#ff0303" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Label text="-Zip code must be a 6 digit integer." wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <Label text="-State must be in the 2 letter format." wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+         <children>
+            <Label fx:id="created" text="Account created successuly!! You may now login!" textAlignment="CENTER" textFill="#08dc04" visible="false" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

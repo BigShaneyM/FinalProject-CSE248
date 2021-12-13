@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.control.CollegeSearchSceneController">
+   <center>
+      <TableView fx:id="view" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="idCol" prefWidth="55.20001220703125" text="ID" />
+          <TableColumn fx:id="nameCol" prefWidth="84.79998779296875" text="Name" />
+          <TableColumn fx:id="stateCol" prefWidth="55.20001220703125" text="State" />
+            <TableColumn fx:id="localCostCol" prefWidth="72.0" text="Local Cost" />
+            <TableColumn fx:id="publicCostCol" prefWidth="74.39996337890625" text="Public Cost" />
+            <TableColumn fx:id="numStudentsCol" prefWidth="84.800048828125" text="# of Students" />
+            <TableColumn fx:id="numOwnershipCol" prefWidth="70.4000244140625" text="Ownership #" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Search for:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="p" mnemonicParsing="false" onAction="#choiceP" text="Public">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="pnp" mnemonicParsing="false" onAction="#choicePNP" text="Private non-profit" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="pfp" mnemonicParsing="false" onAction="#choicePFP" text="Private for profit" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </CheckBox>
+            <Label text="By State:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="stateField" />
+            <Label text="By Max Cost:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="maxCost" />
+            <Label text="By Location:">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="location" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#search" text="Search">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+            <Label text="Add to your favorites:" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addFav" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addToList" text="Add College">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font>
+      </Button>
+   </top>
+</BorderPane>
